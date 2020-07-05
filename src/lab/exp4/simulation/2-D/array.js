@@ -117,12 +117,12 @@ window.view = {
 		document.getElementById('row').value = this.colsA
 		document.getElementById('col').value = ''
 	},
-	generateFirstMatrixElements: function() {
+	generateFirstMatrixElements: function() {	
 		var size = this.rowsA * this.colsA
-		for ( i = 0 ; i < size ; i++)
+		for ( i = 1 ; i < size+1 ; i++)
 		{
-			var random = Math.floor(Math.random()*15)
-			this.matrixA.push(random)
+			var num = i
+			this.matrixA.push(num)
 		}
 		this.resetRowsAndCols()
 		this.disableButton('row')
@@ -135,10 +135,10 @@ window.view = {
 	},
 	generateSecondMatrixElements: function() {
 		var size = this.rowsB * this.colsB
-		for ( i = 0 ; i < size ; i++)
+		for ( i = 1 ; i < size+1 ; i++)
 		{
-			var random = Math.floor(Math.random()*15)
-			this.matrixB.push(random)
+			var ber = i
+			this.matrixB.push(ber)
 		}
 		this.disableButton('generateB')
 		this.changeClass( 'generateB', 'buttonDisable GenerateValueButton show' )
