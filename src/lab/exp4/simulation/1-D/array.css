@@ -537,3 +537,13 @@ body {
 }
 
 }
+img#left-wing {
+     position: relative;
+    top: -15h;
+    left: -4vh;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}

@@ -175,7 +175,9 @@ window.view = {
 		var element = document.getElementById('sortingDiv').childNodes
 		document.getElementById('key').innerHTML = element[this.i].firstChild.innerHTML
 		var elements = document.getElementById('sortingDiv').childNodes
+		elements[this.i].firstChild.innerHTML = "<img src='arrowsmall.png' id='left-wing' alt='heads' />";
 		elements[this.i].firstChild.style.background = '#F5B941'
+		
 	},
 	swapText: function() {
 		var elements = document.getElementById('sortingDiv').childNodes
