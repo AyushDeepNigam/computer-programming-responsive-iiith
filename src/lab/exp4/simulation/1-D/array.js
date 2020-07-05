@@ -62,6 +62,7 @@ window.view = {
 				this.changeClass( 'btnOk', 'okButton buttonDisable' )
 				this.enableButton( 'btnStart' )
 				this.changeClass( 'btnStart', 'startButton button' )
+				enableTextArea()
 			}
 			else
 				alert('Enter array size first !')
@@ -70,6 +71,7 @@ window.view = {
 			alert( 'Size of the array must be an Integer !' )
 	},
 	generateRandomNumbers: function() {
+		disableTextArea()
 		var inputValue = this.getArraySize()
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
@@ -268,5 +270,12 @@ window.view = {
 	init: function() {
 		this.activateEvents()
 	}
+}
+
+function disableTextArea(){
+	document.getElementById('checkTextAr').style.display = 'none';
+}
+function enableTextArea(){
+	document.getElementById('checkTextAr').style.display = 'block';
 }
 window.onload = function() { view.init() }
